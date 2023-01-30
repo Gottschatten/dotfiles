@@ -1,0 +1,35 @@
+#Metasploit
+alias msfconsole="msfconsole --quiet -x \"db_connect $mmd@msf\""
+
+#Pacman
+alias pacsl="touch /home/mmd/log/$(date +%s).log && sudo pacman -Syu | tee /home/mmd/log/$(date +%s).log"
+alias pacs="sudo pacman -Syu"
+
+# Youtube-dl
+alias ytdl='youtube-dl -f bestaudio[ext=m4a] --embed-thumbnail --add-metadata'
+# makepkg
+alias makepkgs='makepkg -cs --skippgpcheck'
+# IPs
+alias ipe='curl ipinfo.io/ip'
+alias ipi='ifconfig wlan0 | grep inet'
+alias ipie='ifconfig enp0s13f0u3u3 | grep inet'
+# Reboot/Shutdown
+alias restart='systemctl -i reboot'
+alias off='systemctl -i poweroff'
+#cp
+alias cp='cp -vip'
+#clear
+alias cls='clear'
+#exa
+alias ls='exa'
+alias ll='exa -alh'
+alias tree='exa --tree'
+#grep
+alias grep='rga'
+#gdb
+alias gdb-pico='arm-none-eabi-gdb -q -ex "target extended-remote :3333"' 
+
+
+
+alias ls='ls -F --color=auto'
+. "$HOME/.cargo/env"
